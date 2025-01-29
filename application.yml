@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: coffeeconfigserver
+  profiles:
+    active:
+    - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github_pat_11BLSHDRA0GcdnYLr2eZT6_cIOrip9tTogxggHLEDI6I0sovsnvvixqfhxOi8DMoItXUO2UXNM2UyQUki@github.com/aorselly/TP-SpringBoot-Microservices.git"
+          default-label: main
+          clone-on-start: true
+          timeout: 5
+          force-pull: true
+        native:
+          search-locations:
+          - "classpath:config"
+
+server:
+  port: 8071
