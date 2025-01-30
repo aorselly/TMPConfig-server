@@ -10,7 +10,9 @@ management:
     env:
       enabled: true
   endpoint:
-    shutdown:
+    #shutdown:
+      #access: unrestricted
+    gateway:
       access: unrestricted
 
 
