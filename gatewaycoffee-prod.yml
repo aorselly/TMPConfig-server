@@ -1,6 +1,12 @@
 spring:
   application:
     name: gatewaycoffee
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          
 management:
   endpoints:
     web:
