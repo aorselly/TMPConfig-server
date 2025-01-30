@@ -31,7 +31,7 @@ eureka:
         fetch-registry: true
         registerWithEureka: true
         serviceUrl:
-            defaultZone: http://localhost:8070/eureka
+            defaultZone: http://localhost:8070/eurekacoffee
 info:
     app:
         name: "Coffees"
