@@ -10,11 +10,35 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+      
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+        access: unrestricted
+        
+eureka:
+    instance:
+        prefer-ip-address: true
+        instance-id: ${spring.application.name}:${random.value}
+    client:
+        fetch-registry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://localhost:8070/eureka
+info:
+    app:
+        name: "Coffees"
+        description: "Coffee Machine"
+        version: "5.0"
+            
+    
 greeting:
   name: Dakota
   coffee: ${greeting.name} is drinking coffee
@@ -23,7 +47,7 @@ account:
   message: "welcome"
   details:
       name: "bob"
-      email: "gshqgdj@qsdhqsfd"
+      email: "{cipher}de8e35a43e9f7886f07ac63f092db1afccb648029acf99e77e3b44db124f2f59806b8b2ab7c10c0d37622584775a9b52"
   phone:
       - 0233566666
       - 0233366666
