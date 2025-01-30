@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: gatewaycoffee
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      access: unrestricted
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+       defaultZone: http://localhost:8070/eureka
+ 
+info:
+  app:
+    name: "gateway"
+    description: "Coffee gateway"
+    version: "1.0"
