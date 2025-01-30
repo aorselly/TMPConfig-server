@@ -29,3 +29,6 @@ info:
     name: "gateway"
     description: "Coffee gateway"
     version: "1.0"
+
+server:
+  port: 8099
